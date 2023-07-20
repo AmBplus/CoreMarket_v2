@@ -126,6 +126,9 @@
   <data name="EmailType" xml:space="preserve">
     <value>لطفا ایمیل معتبر وارد نمایید</value>
   </data>
+  <data name="EntityNotFind" xml:space="preserve">
+    <value>موجودیت پیدا نشد</value>
+  </data>
   <data name="ItsSelfFather" xml:space="preserve">
     <value>دسته خواسته شده پدری ندارد</value>
   </data>
@@ -176,9 +179,6 @@
   </data>
   <data name="RoleUnvalid" xml:space="preserve">
     <value>نقش انتخاب شده نا معتبر میباشد</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
   <data name="UnValid" xml:space="preserve">
     <value> وارد شده نا معتبر مباشد {0}</value>

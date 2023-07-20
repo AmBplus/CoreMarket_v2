@@ -8,10 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Base.Resourses
-{
+namespace Base.Resourses {
     using System;
-    using Base.Resourses;
     
     
     /// <summary>
@@ -41,7 +39,7 @@ namespace Base.Resourses
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Framework.Shared.Resourses.ErrorMessages", typeof(ErrorMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Base.Resourses.ErrorMessages", typeof(ErrorMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -86,6 +84,15 @@ namespace Base.Resourses
         public static string EmailType {
             get {
                 return ResourceManager.GetString("EmailType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to موجودیت پیدا نشد.
+        /// </summary>
+        public static string EntityNotFind {
+            get {
+                return ResourceManager.GetString("EntityNotFind", resourceCulture);
             }
         }
         
@@ -239,15 +246,6 @@ namespace Base.Resourses
         public static string RoleUnvalid {
             get {
                 return ResourceManager.GetString("RoleUnvalid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

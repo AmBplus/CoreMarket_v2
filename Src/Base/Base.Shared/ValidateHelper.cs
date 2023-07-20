@@ -1,5 +1,5 @@
 ﻿
-using Base.Shared.ResultUtil;
+using Base.Shared.ResultUtility;
 using System.ComponentModel.DataAnnotations;
 
 namespace Base.Shared;
@@ -32,7 +32,8 @@ public static class ValidationHelper
         return isValid;
     }
 
-    public static IList<ValidationResult>
+
+    public static ResultOperation
         GetValidationResults<T>(this T entity) where T : class
     {
         var validationContext =
@@ -45,8 +46,14 @@ public static class ValidationHelper
         Validator
             .TryValidateObject(instance: entity, validationContext: validationContext,
                 validationResults: validationResults, validateAllProperties: true);
-
-        return validationResults;
+       
+        if (validationResults.Count > 0)
+        {
+            var resultError = validationResults.GetFailedResultWithError_s();
+            return ResultOperation.BuildFailedResult(resultError.Message);
+        }
+       
+        return ResultOperation.BuildSuccessResult();
     }
 
 }

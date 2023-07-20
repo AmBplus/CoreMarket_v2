@@ -1,7 +1,7 @@
 ﻿
 
 using Base.Shared.Date;
-using Base.Shared.ResultUtil;
+using Base.Shared.ResultUtility;
 
 namespace Base.Core.BaseEntities
 {

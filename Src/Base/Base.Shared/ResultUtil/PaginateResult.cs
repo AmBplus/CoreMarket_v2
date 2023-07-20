@@ -1,4 +1,4 @@
-﻿namespace Base.Shared.ResultUtil;
+﻿namespace Base.Shared.ResultUtility;
 
 public class PaginateResultDto<TEntity> where TEntity : class
 {

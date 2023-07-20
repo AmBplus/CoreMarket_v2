@@ -123,6 +123,9 @@
   <data name="Category" xml:space="preserve">
     <value>دسته بندی</value>
   </data>
+  <data name="CategoryId" xml:space="preserve">
+    <value>آیدی دسته بندی</value>
+  </data>
   <data name="CreateDate" xml:space="preserve">
     <value>تاریخ ایجاد</value>
   </data>

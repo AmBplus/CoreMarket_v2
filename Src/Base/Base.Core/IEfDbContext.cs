@@ -1,8 +1,5 @@
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.Extensions.Configuration;
-using System.Data;
 using System.Linq.Expressions;
 
 namespace Base.Core
@@ -45,24 +42,5 @@ namespace Base.Core
         public ValueTask<TEntity?> FindAsync<TEntity>(params object?[]? keyValues) where TEntity : class;
         public ValueTask<TEntity?> FindAsync<TEntity>(object?[]? keyValues, CancellationToken cancellationToken) where TEntity : class;
         public IQueryable<TResult> FromExpression<TResult>(Expression<Func<IQueryable<TResult>>> expression);
-    }
-
-    public class DapperContext : IDapperContext
-    {
-        private readonly IConfiguration _configuration;
-        private readonly string _connectionString;
-
-        public DapperContext(IConfiguration configuration)
-        {
-            _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("SqlConnection");
-        }
-
-        public IDbConnection CreateConnection()
-            => new SqlConnection(_connectionString);
-    }
-    public interface IDapperContext 
-    {
-         IDbConnection CreateConnection();
     }
 }

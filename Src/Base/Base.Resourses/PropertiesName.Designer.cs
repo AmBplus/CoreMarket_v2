@@ -8,10 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Base.Resourses
-{
+namespace Base.Resourses {
     using System;
-    using Base.Resourses;
     
     
     /// <summary>
@@ -41,7 +39,7 @@ namespace Base.Resourses
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Framework.Shared.Resourses.PropertiesName", typeof(PropertiesName).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Base.Resourses.PropertiesName", typeof(PropertiesName).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -77,6 +75,15 @@ namespace Base.Resourses
         public static string Category {
             get {
                 return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to آیدی دسته بندی.
+        /// </summary>
+        public static string CategoryId {
+            get {
+                return ResourceManager.GetString("CategoryId", resourceCulture);
             }
         }
         

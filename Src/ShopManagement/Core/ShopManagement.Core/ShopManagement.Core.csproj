@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Exceptions\" />
     <Folder Include="Services\ProductCategory\Command\" />
     <Folder Include="Services\ProductCategory\Query\" />
-    <Folder Include="Services\Product\Query\" />
     <Folder Include="Services\Slide\Command\" />
     <Folder Include="Services\Slide\Query\" />
   </ItemGroup>

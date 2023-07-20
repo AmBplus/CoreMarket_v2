@@ -1,5 +1,5 @@
 ﻿using Ardalis.Specification;
-using Base.Shared.ResultUtil;
+using Base.Shared.ResultUtility;
 using Microsoft.EntityFrameworkCore;
 
 namespace Base.Infrastructure.Extensions

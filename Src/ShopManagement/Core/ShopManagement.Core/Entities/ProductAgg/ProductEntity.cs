@@ -10,7 +10,7 @@ namespace ShopManagement.Core.Entities.ProductAgg
         public string Name { get; private set; }
         public string Code { get; private set; }
         public double UnitPrice { get; private set; }
-        public bool IsInStock { get; private set; }
+        public bool IsStock { get; private set; }
         public string ShortDescription { get; private set; }
         public string Description { get; private set; }
         public string Picture { get; private set; }
@@ -40,7 +40,7 @@ namespace ShopManagement.Core.Entities.ProductAgg
             Slug = slug;
             Keywords = keywords;
             MetaDescription = metaDescription;
-            IsInStock = true;
+            IsStock = true;
         }
 
         public void Edit(string name, string code, double unitPrice,
@@ -62,14 +62,10 @@ namespace ShopManagement.Core.Entities.ProductAgg
             MetaDescription = metaDescription;
         }
 
-        public void InStock()
+        public void ChangeStock(bool status)
         {
-            IsInStock = true;
+            IsStock = status;
         }
-
-        public void NotIdStock()
-        {
-            IsInStock = false;
-        }
+        
     }
 }

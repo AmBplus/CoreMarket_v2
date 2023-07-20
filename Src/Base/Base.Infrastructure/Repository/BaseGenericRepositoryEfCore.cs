@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using Ardalis.Specification;
 
 using Base.Infrastructure.Extensions;
-using Base.Shared.ResultUtil;
+using Base.Shared.ResultUtility;
 using Base.Shared;
 using Base.Core.Repository;
 using Base.Core.BaseEntities;

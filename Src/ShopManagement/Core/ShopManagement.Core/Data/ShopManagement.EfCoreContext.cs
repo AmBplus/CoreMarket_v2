@@ -7,7 +7,7 @@ using ShopManagement.Core.Entities.SlideAgg;
 
 namespace ShopManagement.Core.Data
 {
-    public interface ShopManagement_EfCoreContext : IEfDbContext
+    public interface ShopManagementEfCoreContext : IEfDbContext
     {
         public DbSet<ProductEntity> ProductEntities { get; set; }   
         public DbSet<ProductCategoryEntity> ProductCategoryEntities { get; set; }   

@@ -1,4 +1,4 @@
-﻿namespace Base.Shared.ResultUtil;
+﻿namespace Base.Shared.ResultUtility;
 
 /// <summary>
 /// برگرداندن نتیجه عملیات انجام شده
@@ -112,6 +112,14 @@ public class ResultOperation<T>
         };
     }
     public static ResultOperation<T> BuildFailedResult(List<string> message)
+    {
+        return new ResultOperation<T>()
+        {
+            Message = message,
+            IsSuccess = false,
+        };
+    }
+    public static ResultOperation<T> BuildFailedResult(IEnumerable<string> message)
     {
         return new ResultOperation<T>()
         {

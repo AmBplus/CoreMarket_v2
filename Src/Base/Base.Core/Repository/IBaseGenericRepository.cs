@@ -2,7 +2,7 @@
 using Ardalis.Specification;
 using Microsoft.Data.SqlClient;
 using Base.Core.BaseEntities;
-using Base.Shared.ResultUtil;
+using Base.Shared.ResultUtility;
 using Base.Shared;
 
 namespace Base.Core.Repository

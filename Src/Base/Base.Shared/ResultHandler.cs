@@ -1,4 +1,4 @@
-﻿using Base.Shared.ResultUtil;
+﻿using Base.Shared.ResultUtility;
 using System.Text.Json.Serialization;
 
 namespace Base.Shared

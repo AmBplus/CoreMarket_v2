@@ -1,4 +1,4 @@
-﻿namespace Base.Shared.ResultUtil;
+﻿namespace Base.Shared.ResultUtility;
 
 /// <summary>
 /// اکستنشن هایی جهت راحت کردن استفاده از
@@ -26,15 +26,19 @@ public static class UtilityResultExtension
     {
         return ResultOperation<T>.BuildSuccessResult(message, entity);
     }
-    public static ResultOperation<T> ToFailed<T>(this T entity, string message)
+    public static ResultOperation<T> ToFailedResult<T>(this T entity, string message)
     {
         return ResultOperation<T>.BuildFailedResult(message);
     }
-    public static ResultOperation<object> ToFailed(this object entity, string message)
+    public static ResultOperation<T> ToFailedResult<T>(this T entity, IEnumerable<string> messages)
+    {
+        return ResultOperation<T>.BuildFailedResult(messages);
+    }
+    public static ResultOperation<object> ToFailedResult(this object entity, string message)
     {
         return ResultOperation<object>.BuildFailedResult(message);
     }
-    public static ResultOperation<object> ToFailed(this object entity)
+    public static ResultOperation<object> ToFailedResult(this object entity)
     {
         return ResultOperation<object>.BuildFailedResult();
     }
