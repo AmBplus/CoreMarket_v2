@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Base\Base.Core\Base.Core.csproj" />
+    <ProjectReference Include="..\..\..\Base\Base.Resourses\Base.Resourses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\ProductCategory\Command\" />
+    <Folder Include="Services\ProductCategory\Query\" />
+    <Folder Include="Services\Product\Query\" />
+    <Folder Include="Services\Slide\Command\" />
+    <Folder Include="Services\Slide\Query\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+</Project>
