@@ -1,5 +1,5 @@
-﻿using Base.AspCoreUtility.Infrastructure.Messages;
-namespace Base.AspCoreUtility.Infrastructure.Messages;
+﻿using Base.AspCore.Infrastructure.Messages;
+namespace Base.AspCore.Infrastructure.Messages;
 
 /// <summary>
 ///     Version 3.0

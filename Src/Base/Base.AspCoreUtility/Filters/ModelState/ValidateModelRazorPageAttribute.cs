@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Base.AspCoreUtility.Filters.ModelState;
+namespace Base.AspCore.Filters.ModelState;
 
 public class ValidateModelRazorPageAttribute : Attribute, IPageFilter
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 
-namespace Base.AspCoreUtility.Infrastructure;
+namespace Base.AspCore.Infrastructure;
 
 //public static class RemoveFileHelper
 //{

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace Base.AspCoreUtility.Infrastructure.Security;
+namespace Base.AspCore.Infrastructure.Security;
 
 public static class SecurityUtility
 {

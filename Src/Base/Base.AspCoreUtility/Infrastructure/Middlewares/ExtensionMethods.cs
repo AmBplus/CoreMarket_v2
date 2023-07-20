@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Base.AspCoreUtility.Infrastructure.Middlewares;
+using Base.AspCore.Infrastructure.Middlewares;
 
-namespace Base.AspCoreUtility.Infrastructure.Middlewares;
+namespace Base.AspCore.Infrastructure.Middlewares;
 
 public static class ExtensionMethods
 {

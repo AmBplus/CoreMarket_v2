@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Base.AspCoreUtility.Infrastructure;
+namespace Base.AspCore.Infrastructure;
 
 public static class CookiesManger
 {

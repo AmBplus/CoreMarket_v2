@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Base.AspCoreUtility.Infrastructure.Middlewares;
+namespace Base.AspCore.Infrastructure.Middlewares;
 
 public class GlobalExceptionHandlerMiddleware : object
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Myrmec;
 
-namespace Base.AspCoreUtility.CheckContentType;
+namespace Base.AspCore.CheckContentType;
 
 public static class CheckTypeHelper
 {

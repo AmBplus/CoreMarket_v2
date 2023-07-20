@@ -1,9 +1,9 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 using Microsoft.AspNetCore.Http;
-using Base.AspCoreUtility.Infrastructure.Settings;
+using Base.AspCore.Infrastructure.Settings;
 
-namespace Base.AspCoreUtility.Infrastructure.Middlewares;
+namespace Base.AspCore.Infrastructure.Middlewares;
 
 public class ActivationKeysHandlerMiddleware : object
 {

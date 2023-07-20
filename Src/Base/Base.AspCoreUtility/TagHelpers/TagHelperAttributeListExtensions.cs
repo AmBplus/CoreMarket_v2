@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace Base.AspCoreUtility.TagHelpers;
+namespace Base.AspCore.TagHelpers;
 
 public static class TagHelperAttributeListExtensions
 {

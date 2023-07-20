@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Base.AspCoreUtility.ValidateAttribute;
+namespace Base.AspCore.ValidateAttribute;
 
 public class MaxSizeFileAttribute : ValidationAttribute, IClientModelValidator
 {

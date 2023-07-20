@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Base.AspCoreUtility.Infrastructure.Messages;
+using Base.AspCore.Infrastructure.Messages;
 
-namespace Base.AspCoreUtility.Infrastructure;
+namespace Base.AspCore.Infrastructure;
 
 /// <summary>
 ///     Version 3.0

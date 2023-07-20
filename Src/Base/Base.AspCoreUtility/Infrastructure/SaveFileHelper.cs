@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Base.AspCoreUtility.CheckContentType;
-using Base.AspCoreUtility.Infrastructure;
+using Base.AspCore.CheckContentType;
+using Base.AspCore.Infrastructure;
 
-namespace Base.AspCoreUtility.Infrastructure;
+namespace Base.AspCore.Infrastructure;
 
 public static class SaveFileHelper
 {

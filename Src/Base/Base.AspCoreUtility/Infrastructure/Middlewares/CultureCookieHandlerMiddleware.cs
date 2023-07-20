@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
 using Microsoft.AspNetCore.Http;
-using Base.AspCoreUtility.Infrastructure.Settings;
+using Base.AspCore.Infrastructure.Settings;
 
-namespace Base.AspCoreUtility.Infrastructure.Middlewares;
+namespace Base.AspCore.Infrastructure.Middlewares;
 
 public class CultureCookieHandlerMiddleware : object
 {

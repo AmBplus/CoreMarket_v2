@@ -1,4 +1,4 @@
-﻿namespace Base.AspCoreUtility.Infrastructure;
+﻿namespace Base.AspCore.Infrastructure;
 
 public static class Convert
 {

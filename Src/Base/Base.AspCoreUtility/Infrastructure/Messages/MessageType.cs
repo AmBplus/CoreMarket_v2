@@ -1,4 +1,4 @@
-﻿namespace Base.AspCoreUtility.Infrastructure.Messages;
+﻿namespace Base.AspCore.Infrastructure.Messages;
 
 /// <summary>
 ///     Version 3.0

@@ -1,4 +1,4 @@
-﻿namespace Base.AspCoreUtility.Infrastructure.Settings;
+﻿namespace Base.AspCore.Infrastructure.Settings;
 
 public class SharedIcons : object
 {

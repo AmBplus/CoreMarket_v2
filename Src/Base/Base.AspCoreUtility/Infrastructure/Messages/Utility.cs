@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Base.AspCoreUtility.Infrastructure.Messages;
 using Base.Shared;
+using Base.AspCore.Infrastructure.Messages;
 
-namespace Base.AspCoreUtility.Infrastructure.Messages;
+namespace Base.AspCore.Infrastructure.Messages;
 
 /// <summary>
 ///     Version 3.0

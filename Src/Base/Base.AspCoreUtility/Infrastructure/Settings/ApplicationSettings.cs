@@ -1,6 +1,6 @@
-﻿using Base.AspCoreUtility.Infrastructure.Settings;
+﻿using Base.AspCore.Infrastructure.Settings;
 
-namespace Base.AspCoreUtility.Infrastructure.Settings;
+namespace Base.AspCore.Infrastructure.Settings;
 
 public class ApplicationSettings : object
 {
