@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Base.Core\Base.Core.csproj" />
+    <ProjectReference Include="..\Base.Resourses\Base.Resourses.csproj" />
     <ProjectReference Include="..\Base.Shared\Base.Shared.csproj" />
   </ItemGroup>
 

@@ -20,12 +20,12 @@ namespace Base.Core.BaseEntities
         public virtual ResultOperation SetRemove()
         {
             IsRemove = true;
-            return ResultOperation.BuildSuccessResult();
+            return ResultOperation.ToSuccessResult();
         }
         public virtual ResultOperation SetUnRemove()
         {
             IsRemove = false;
-            return ResultOperation.BuildSuccessResult();
+            return ResultOperation.ToSuccessResult();
         }
     }
 }

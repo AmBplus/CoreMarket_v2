@@ -12,7 +12,7 @@ public class ResultOperation
     public bool IsSuccess { get; private set; }
     public IEnumerable<string>? Message { get; private set; }
 
-    public static ResultOperation BuildSuccessResult(string message)
+    public static ResultOperation ToSuccessResult(string message)
     {
         return new ResultOperation()
         {
@@ -20,7 +20,7 @@ public class ResultOperation
             Message = new List<string>() { message },
         };
     }
-    public static ResultOperation BuildSuccessResult()
+    public static ResultOperation ToSuccessResult()
     {
         return new ResultOperation()
         {
@@ -28,7 +28,7 @@ public class ResultOperation
             Message = new List<string>()
         };
     }
-    public static ResultOperation BuildFailedResult(string message)
+    public static ResultOperation ToFailedResult(string message)
     {
         return new ResultOperation()
         {
@@ -36,7 +36,7 @@ public class ResultOperation
             Message = new List<string>() { message },
         };
     }
-    public static ResultOperation BuildFailedResult(List<string> message)
+    public static ResultOperation ToFailedResult(List<string> message)
     {
         return new ResultOperation()
         {
@@ -44,7 +44,7 @@ public class ResultOperation
             Message = message,
         };
     }
-    public static ResultOperation BuildFailedResult(IEnumerable<string> message)
+    public static ResultOperation ToFailedResult(IEnumerable<string> message)
     {
         return new ResultOperation()
         {
@@ -68,7 +68,7 @@ public class ResultOperation<T>
         Message = new List<string>();
     }
     public T Data { get; private set; }
-    public static ResultOperation<T> BuildSuccessResult<T>(T data)
+    public static ResultOperation<T> ToSuccessResult<T>(T data)
     {
         return new ResultOperation<T>()
         {
@@ -77,7 +77,7 @@ public class ResultOperation<T>
             Message = new List<string>()
         };
     }
-    public static ResultOperation<T> BuildSuccessResult(string message, T data)
+    public static ResultOperation<T> ToSuccessResult(string message, T data)
     {
         return new ResultOperation<T>()
         {
@@ -86,7 +86,7 @@ public class ResultOperation<T>
             Message = new List<string>() { message },
         };
     }
-    public static ResultOperation<T> BuildSuccessResult(List<string> message, T data)
+    public static ResultOperation<T> ToSuccessResult(List<string> message, T data)
     {
         return new ResultOperation<T>()
         {
@@ -95,7 +95,7 @@ public class ResultOperation<T>
             Message = message,
         };
     }
-    public static ResultOperation<T> BuildFailedResult()
+    public static ResultOperation<T> ToFailedResult()
     {
         return new ResultOperation<T>()
         {
@@ -103,7 +103,7 @@ public class ResultOperation<T>
             IsSuccess = false,
         };
     }
-    public static ResultOperation<T> BuildFailedResult(string message)
+    public static ResultOperation<T> ToFailedResult(string message)
     {
         return new ResultOperation<T>()
         {
@@ -111,7 +111,7 @@ public class ResultOperation<T>
             IsSuccess = false,
         };
     }
-    public static ResultOperation<T> BuildFailedResult(List<string> message)
+    public static ResultOperation<T> ToFailedResult(List<string> message)
     {
         return new ResultOperation<T>()
         {
@@ -119,7 +119,7 @@ public class ResultOperation<T>
             IsSuccess = false,
         };
     }
-    public static ResultOperation<T> BuildFailedResult(IEnumerable<string> message)
+    public static ResultOperation<T> ToFailedResult(IEnumerable<string> message)
     {
         return new ResultOperation<T>()
         {
@@ -127,7 +127,7 @@ public class ResultOperation<T>
             IsSuccess = false,
         };
     }
-    public static ResultOperation<T> BuildFailedResult(string message, T data)
+    public static ResultOperation<T> ToFailedResult(string message, T data)
     {
         return new ResultOperation<T>()
         {
@@ -136,7 +136,7 @@ public class ResultOperation<T>
             Message = new List<string>() { message }
         };
     }
-    public static ResultOperation<T> BuildFailedResult(List<string> message, T data)
+    public static ResultOperation<T> ToFailedResult(List<string> message, T data)
     {
         return new ResultOperation<T>()
         {

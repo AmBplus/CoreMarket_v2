@@ -13,7 +13,7 @@ public static class ValidationHelper
     public static ResultOperation GetFailedResultWithError_s(this IList<ValidationResult> validationResults)
     {
         var errors = validationResults.Select(x => x.ErrorMessage);
-        return ResultOperation.BuildFailedResult(errors!);
+        return ResultOperation.ToFailedResult(errors!);
     }
 
     public static bool IsValid<T>(this T entity) where T : class
@@ -50,10 +50,10 @@ public static class ValidationHelper
         if (validationResults.Count > 0)
         {
             var resultError = validationResults.GetFailedResultWithError_s();
-            return ResultOperation.BuildFailedResult(resultError.Message);
+            return ResultOperation.ToFailedResult(resultError.Message);
         }
        
-        return ResultOperation.BuildSuccessResult();
+        return ResultOperation.ToSuccessResult();
     }
 
 }

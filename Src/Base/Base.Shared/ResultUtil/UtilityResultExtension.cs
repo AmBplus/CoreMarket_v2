@@ -14,7 +14,7 @@ public static class UtilityResultExtension
     /// <returns></returns>
     public static ResultOperation<T> ToSuccessResult<T>(this T entity)
     {
-        return ResultOperation<T>.BuildSuccessResult(entity);
+        return ResultOperation<T>.ToSuccessResult(entity);
     }
     /// <summary>
     /// ساختن یک نتیجه عملیات موفق به صورت جنریک به همراه پیام
@@ -24,22 +24,22 @@ public static class UtilityResultExtension
     /// <returns></returns>
     public static ResultOperation<T> ToSuccessResult<T>(this T entity, string message)
     {
-        return ResultOperation<T>.BuildSuccessResult(message, entity);
+        return ResultOperation<T>.ToSuccessResult(message, entity);
     }
     public static ResultOperation<T> ToFailedResult<T>(this T entity, string message)
     {
-        return ResultOperation<T>.BuildFailedResult(message);
+        return ResultOperation<T>.ToFailedResult(message);
     }
     public static ResultOperation<T> ToFailedResult<T>(this T entity, IEnumerable<string> messages)
     {
-        return ResultOperation<T>.BuildFailedResult(messages);
+        return ResultOperation<T>.ToFailedResult(messages);
     }
     public static ResultOperation<object> ToFailedResult(this object entity, string message)
     {
-        return ResultOperation<object>.BuildFailedResult(message);
+        return ResultOperation<object>.ToFailedResult(message);
     }
     public static ResultOperation<object> ToFailedResult(this object entity)
     {
-        return ResultOperation<object>.BuildFailedResult();
+        return ResultOperation<object>.ToFailedResult();
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Core.Data
 {
-    public interface ShopManagementDapperContext : IDapperContext
+    public interface IShopManagementDapperContext : IDapperContext
     {
     }
 }

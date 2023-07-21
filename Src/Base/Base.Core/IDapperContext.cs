@@ -2,7 +2,7 @@
 
 namespace Base.Core
 {
-    public interface IDapperContext : IDisposable, IAsyncDisposable
+    public interface IDapperContext : IDisposable
     {
          IDbConnection CreateConnection();
     }

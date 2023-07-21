@@ -106,31 +106,28 @@ namespace ShopManagement.Core.Services.Product.Command
         }
     }
 
-    public interface IUpdateProductCmdHandler
-    {
-        Task<ResultOperation> Handle(UpdateProductCmdRequest request, CancellationToken cancellationToken);
-    }
+ 
     public class UpdateProductCmdHandler : IRequestHandler<UpdateProductCmdRequest, ResultOperation>, IUpdateProductCmdHandler
     {
-        public UpdateProductCmdHandler(ILogger<CreateProductCmdHandler> logger, ShopManagementEfCoreContext context)
+        public UpdateProductCmdHandler(ILogger<CreateProductCmdHandler> logger, IShopManagementEfCoreContext context)
         {
             Logger = logger;
             Context = context;
         }
 
         public ILogger<CreateProductCmdHandler> Logger { get; }
-        public ShopManagementEfCoreContext Context { get; }
+        public IShopManagementEfCoreContext Context { get; }
 
         public async Task<ResultOperation> Handle(UpdateProductCmdRequest request, CancellationToken cancellationToken)
         {
             var resultValidate = request.GetValidationResults();
             if (!resultValidate.IsSuccess) return resultValidate;
             var result = Context.ProductEntities.FirstOrDefault(x => x.Id == request.Id);
-            if (result == null) return ResultOperation.BuildFailedResult(string.Format(ErrorMessages.EntityNotFind));
+            if (result == null) return ResultOperation.ToFailedResult(string.Format(ErrorMessages.EntityNotFind));
             var product = request.MapToProduct(result);
             Context.Update(product);
             await Context.SaveChangesAsync();
-            return ResultOperation.BuildSuccessResult();
+            return ResultOperation.ToSuccessResult();
         }
     }
 }

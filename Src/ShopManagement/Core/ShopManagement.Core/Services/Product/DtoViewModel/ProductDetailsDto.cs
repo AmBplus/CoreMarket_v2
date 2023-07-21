@@ -1,4 +1,6 @@
-﻿namespace ShopManagement.Core.Services.Product.DtoViewModel;
+﻿using System;
+
+namespace ShopManagement.Core.Services.Product.DtoViewModel;
 
 public class ProductDetailsDto
 {

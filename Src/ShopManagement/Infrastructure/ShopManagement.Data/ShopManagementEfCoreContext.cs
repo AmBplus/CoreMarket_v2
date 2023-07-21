@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Data
 {
-    public class ShopManagementEfCoreContext : DbContext, Core.Data.ShopManagementEfCoreContext
+    public class ShopManagementEfCoreContext : DbContext, Core.Data.IShopManagementEfCoreContext
     {
         public DbSet<ProductEntity> ProductEntities { get ; set  ; }
         public DbSet<ProductCategoryEntity> ProductCategoryEntities { get  ; set  ; }

@@ -89,20 +89,17 @@ namespace ShopManagement.Core.Services.Product.Command
         }
     }
 
-    public interface ICreateProductCmdHandler
-    {
-        Task<ResultOperation> Handle(CreateProductCmdRequest request,CancellationToken cancellationToken);
-    }
+  
     public class CreateProductCmdHandler : IRequestHandler<CreateProductCmdRequest, ResultOperation>,ICreateProductCmdHandler
     {
-        public CreateProductCmdHandler(ILogger<CreateProductCmdHandler> logger , ShopManagementEfCoreContext context)
+        public CreateProductCmdHandler(ILogger<CreateProductCmdHandler> logger , IShopManagementEfCoreContext context)
         {
             Logger = logger;
             Context = context;
         }
 
         public ILogger<CreateProductCmdHandler> Logger { get; }
-        public ShopManagementEfCoreContext Context { get; }
+        public IShopManagementEfCoreContext Context { get; }
 
         public async Task<ResultOperation> Handle(CreateProductCmdRequest request, CancellationToken cancellationToken)
         {
@@ -111,7 +108,7 @@ namespace ShopManagement.Core.Services.Product.Command
             var product = request.MapToProduct();
             Context.Update(product);
             await Context.SaveChangesAsync();
-            return ResultOperation.BuildSuccessResult();
+            return ResultOperation.ToSuccessResult();
         }
     }
 }
