@@ -11,20 +11,20 @@ namespace Base.Core.BaseEntities
         public T Id { get; set; }
         public DateTime CreatedDate { get; private set; }
         public DateTime UpdateDate { get; set; }
-        public bool IsRemove { get; private set; } = false;
+        public bool IsRemoved { get;private  set; } = false;
         public BaseEntity()
         {
             CreatedDate = DateUtility.DateTimeNow();
         }
 
-        public virtual ResultOperation SetRemove()
+        public virtual ResultOperation Remove()
         {
-            IsRemove = true;
+            IsRemoved = true;
             return ResultOperation.ToSuccessResult();
         }
-        public virtual ResultOperation SetUnRemove()
+        public virtual ResultOperation Restore()
         {
-            IsRemove = false;
+            IsRemoved = false;
             return ResultOperation.ToSuccessResult();
         }
     }

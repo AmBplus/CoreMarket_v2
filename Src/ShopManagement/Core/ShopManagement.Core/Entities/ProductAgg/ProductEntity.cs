@@ -41,6 +41,7 @@ namespace ShopManagement.Core.Entities.ProductAgg
             Keywords = keywords;
             MetaDescription = metaDescription;
             IsStock = true;
+            ProductPictures = new List<ProductPictureEntity>();
         }
 
         public void Edit(string name, string code, double unitPrice,

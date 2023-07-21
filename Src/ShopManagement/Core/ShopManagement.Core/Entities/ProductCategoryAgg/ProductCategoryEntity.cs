@@ -13,6 +13,7 @@ namespace ShopManagement.Core.Entities.ProductCategoryAgg
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
+      
         public List<ProductEntity> Products { get; private set; }
 
         public ProductCategoryEntity()
@@ -32,6 +33,7 @@ namespace ShopManagement.Core.Entities.ProductCategoryAgg
             Keywords = keywords;
             MetaDescription = metaDescription;
             Slug = slug;
+            Products = new List<ProductEntity>();
         }
 
         public void Edit(string name, string description, string picture,
@@ -47,5 +49,6 @@ namespace ShopManagement.Core.Entities.ProductCategoryAgg
             MetaDescription = metaDescription;
             Slug = slug;
         }
+      
     }
 }

@@ -46,7 +46,7 @@ namespace ShopManagement.Xunit.Core.Entities
             Assert.Equal(keywords, product.Keywords);
             Assert.Equal(metaDescription, product.MetaDescription);
             Assert.True(product.IsStock); // Default value should be true
-            Assert.False(product.IsRemove); // Default value should be false
+            Assert.False(product.IsRemoved); // Default value should be false
         }
 
         [Fact]
@@ -97,10 +97,10 @@ namespace ShopManagement.Xunit.Core.Entities
                 "Alt", "Title", 1, "sample-product", "sample,test", "Meta");
 
             // Act
-            var result = product.SetRemove();
+            var result = product.Remove();
 
             // Assert
-            Assert.True(product.IsRemove);
+            Assert.True(product.IsRemoved);
             Assert.True(result.IsSuccess);
         }
 
@@ -110,13 +110,13 @@ namespace ShopManagement.Xunit.Core.Entities
             // Arrange
             var product = new ProductEntity("Sample Product", "SP001", 99.99, "Short Desc", "Desc", "product.jpg",
                 "Alt", "Title", 1, "sample-product", "sample,test", "Meta");
-            product.SetRemove(); // Ensure IsRemove is initially true
+            product.Remove(); // Ensure IsRemove is initially true
 
             // Act
-            var result = product.SetUnRemove();
+            var result = product.Restore();
 
             // Assert
-            Assert.False(product.IsRemove);
+            Assert.False(product.IsRemoved);
             Assert.True(result.IsSuccess);
         }
     }

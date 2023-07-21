@@ -9,7 +9,7 @@
         public string Title { get; private set; }
         public string Text { get; private set; }
         public string BtnText { get; private set; }
-        public bool IsRemoved { get; private set; }
+     
 
         public SlideEntity(string picture, string pictureAlt, string pictureTitle, string heading,
             string title, string text, string btnText)
@@ -21,7 +21,7 @@
             Title = title;
             Text = text;
             BtnText = btnText;
-            IsRemoved = false;
+            
         }
 
         public void Edit(string picture, string pictureAlt, string pictureTitle, string heading,
@@ -36,14 +36,8 @@
             BtnText = btnText;
         }
 
-        public void Remove()
-        {
-            IsRemoved = true;
-        }
+      
 
-        public void Restore()
-        {
-            IsRemoved = false;
-        }
+      
     }
 }

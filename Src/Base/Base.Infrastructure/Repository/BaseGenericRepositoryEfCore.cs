@@ -151,7 +151,7 @@ namespace Base.Infrastructure.Repository
         {
             var entityToRemove = await Get(entity.Id, true);
             entityToRemove.HandleNotFindEntityInRepositoryException();
-            entityToRemove!.SetRemove();
+            entityToRemove!.Remove();
             DbSetEntity.Update(entityToRemove);
         }
 
@@ -159,7 +159,7 @@ namespace Base.Infrastructure.Repository
         {
             var entityToUnRemove = await Get(entity.Id, true);
             entityToUnRemove.HandleNotFindEntityInRepositoryException();
-            entityToUnRemove!.SetUnRemove();
+            entityToUnRemove!.Remove();
             DbSetEntity.Update(entityToUnRemove);
         }
 
