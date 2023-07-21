@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using ShopManagement.Core.Data;
 using ShopManagement.Core.Entities.ProductAgg;
 using ShopManagement.Core.Services.ProductCategory.DtoViewModel;
+using ShopManagement.Core.Services.Product.Interfaces;
 
 namespace ShopManagement.Core.Services.Product.Command
 {

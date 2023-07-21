@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using ShopManagement.Core.Data;
+using ShopManagement.Core.Services.Product.Interfaces;
 using System.Threading;
 using System.Threading.Tasks;
 

@@ -1,4 +1,8 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
+using Microsoft.Extensions.Logging;
+using ShopManagement.Core.Data;
+using ShopManagement.Core.Services.Product.DtoViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,19 +12,33 @@ using System.Threading.Tasks;
 
 namespace ShopManagement.Core.Services.Product.Query
 {
-    public record GetProductSearchQueryRequest : IRequest<GetProductSearchQueryResponse>    
+    public record GetProductSearchQueryRequest : IRequest<ProductViewModel>    
     {
         public string Name { get; set; }
+        public string Code { get; set; }
+        public long CategoryId { get; set; }
     }
-    public record GetProductSearchQueryResponse
+  
+    public class GetProductSearchQueryHandler : IRequestHandler<GetProductSearchQueryRequest, ProductViewModel> , IGetProductSearchQueryHandler
     {
-
-    }
-    public class GetProductSearchQueryHandler : IRequestHandler<GetProductSearchQueryRequest, GetProductSearchQueryResponse> , IGetProductSearchQueryHandler
-    {
-        public async Task<GetProductSearchQueryResponse> Handle(GetProductSearchQueryRequest request, CancellationToken cancellationToken)
+        public GetProductSearchQueryHandler(ILogger<GetProductSearchQueryHandler>  logger , IShopManagementDapperContext context)
         {
-            throw new NotImplementedException();
+            Logger = logger;
+            Context = context;
+        }
+
+        public ILogger<GetProductSearchQueryHandler> Logger { get; }
+        public IShopManagementDapperContext Context { get; }
+
+        public async Task<ProductViewModel> Handle(GetProductSearchQueryRequest request, CancellationToken cancellationToken)
+        {
+            using (var conection  = Context.CreateConnection())
+            {
+                var query = @"select Id  Picture Name Code Category CategoryId CreationDate";
+                await conection.QueryAsync(query);
+ 
+              }
+            throw new NotImplementedException();    
         }
     }
 }

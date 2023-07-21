@@ -4,6 +4,7 @@ using Dapper;
 using MediatR;
 using ShopManagement.Core.Data;
 using ShopManagement.Core.Services.Product.DtoViewModel;
+using ShopManagement.Core.Services.Product.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

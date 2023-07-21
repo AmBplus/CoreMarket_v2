@@ -22,4 +22,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="c\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\ShopManagement\Core\ShopManagement.Core\ShopManagement.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using ShopManagement.Core.Services.Product.Interfaces;
 
 namespace ShopManagement.Core.Services.Product.Command
 {

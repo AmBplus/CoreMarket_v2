@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ShopManagement.Core.Services.Product.DtoViewModel;
 
@@ -15,5 +16,8 @@ public class ProductDetailsDto
     public string Keywords { get; private set; }
     public string MetaDescription { get; private set; }
     public string Slug { get; private set; }
-
+    public string Category { get; set; }
+    public string CategoryId { get; set; }
+    public List<string> PictureImages { get; set; }
+    
 }
